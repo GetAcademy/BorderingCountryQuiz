@@ -1,6 +1,4 @@
-﻿using BorderingCountryQuiz.CountriesJSON;
-
-namespace BorderingCountryQuiz
+﻿namespace BorderingCountryQuiz
 {
     internal class App
     {
