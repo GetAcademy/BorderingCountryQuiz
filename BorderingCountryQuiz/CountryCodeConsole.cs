@@ -5,8 +5,8 @@ namespace BorderingCountryQuiz
 {
     internal class CountryCodeConsole
     {
-        private static string[] _countryCodes;
-        private string _question;
+        private static readonly string[] _countryCodes;
+        private readonly string _question;
 
         static CountryCodeConsole()
         {
