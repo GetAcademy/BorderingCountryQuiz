@@ -4,13 +4,9 @@ using BorderingCountryQuiz.CountriesJSON;
 var json = File.ReadAllText("CountriesJSON/countries.json");
 var countries = JsonSerializer.Deserialize<CountryWithNeighbors[]>(json);
 var app = new App();
-
 foreach (var country in countries)
 {
-    var neighbors = country.neighbors
-        .Where(c => c.borderType.Contains("land"))
-        .Select(n => n.country);
-    app.AddCountry(country.country, neighbors);
+    app.AddCountry(country.country, country.GetNeighbors());
 }
 
 var countryCodeConsole = new CountryCodeConsole("Velg et land: ");

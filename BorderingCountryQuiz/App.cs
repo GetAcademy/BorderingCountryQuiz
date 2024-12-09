@@ -7,7 +7,7 @@
             
         }
 
-        public void AddCountry(string countryName, IEnumerable<string> neighboringCountryNames)
+        public void AddCountry(string countryName, string[] neighboringCountryNames)
         {
             
         }
