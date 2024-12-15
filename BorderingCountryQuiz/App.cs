@@ -11,5 +11,12 @@
         {
             
         }
+
+        public void AskForNeighborsOfRandomCountry()
+        {
+            var countryCodeConsole = new CountryCodeConsole("Velg et land: ");
+            var countryName = countryCodeConsole.AskForCountry();
+            Console.WriteLine(countryName);
+        }
     }
 }
