@@ -1,10 +1,9 @@
-﻿using System.Text.Json;using BorderingCountryQuiz;
+﻿using BorderingCountryQuiz;
 using BorderingCountryQuiz.CountriesJSON;
 
-var json = File.ReadAllText("CountriesJSON/countries.json");
-var countries = JsonSerializer.Deserialize<CountryWithNeighbors[]>(json);
+
 var app = new App();
-foreach (var country in countries)
+foreach (var country in CountryWithNeighbors.GetCountries())
 {
     app.AddCountry(country.country, country.GetNeighbors());
 }
